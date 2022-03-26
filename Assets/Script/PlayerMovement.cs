@@ -22,7 +22,19 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movementPosition = movementInput;
-        rb.MovePosition(rb.position + movementPosition * Time.fixedDeltaTime * speed);
+        Vector3 playerMovement = rb.position + movementPosition * Time.fixedDeltaTime * speed;
+        
+        if (playerMovement.x >= 9)
+            playerMovement.x = 9;
+        else if(playerMovement.x <= -9)
+            playerMovement.x = -9;
+
+        if (playerMovement.y >= 5)
+            playerMovement.y = 5;
+        else if(playerMovement.y <= -5)
+            playerMovement.y = -5;
+
+        rb.MovePosition(playerMovement);
 
         delay += Time.fixedDeltaTime;
 
