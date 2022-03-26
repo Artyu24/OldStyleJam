@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   bullet: {fileID: 5422324028509517773, guid: b3eba4286796cae47bd04941a6910263, type: 3}
-  spawnBulletPoint: {fileID: 538399038}
+  spawnBulletPoint: {fileID: 538399039}
 --- !u!114 &472726371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,8 +473,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
