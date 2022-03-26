@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementPosition = movementInput;
         rb.MovePosition(rb.position + movementPosition * Time.fixedDeltaTime * speed);
 
+        Debug.Log(movementInput);
+
         delay += Time.fixedDeltaTime;
 
         if (isShooting && delay >= 0.5f)
