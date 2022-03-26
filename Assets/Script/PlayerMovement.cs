@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         delay += Time.fixedDeltaTime;
 
-        if (isShooting && delay >= 0.5f)
+        if (isShooting && delay >= 0.25f)
         {
             delay = 0;
             Instantiate(bullet, spawnBulletPoint.position, Quaternion.identity);
