@@ -10,10 +10,10 @@ public class EnemySpawnManager : MonoBehaviour
     private float enemyYAxis;
     private float enemyZAxis = 20f;
 
-    void Start()
-    {
+    private bool isSpawn;
 
-    }
+    private Rigidbody rb;
+    public float speed = 10;
 
 
     void Update()
@@ -21,8 +21,20 @@ public class EnemySpawnManager : MonoBehaviour
         enemyXAxis = Random.Range(-9, 10);
         enemyYAxis = Random.Range(-5, 6);
 
+        if(!isSpawn)
+            StartCoroutine(TimerSpawn());
+
+        
+    }
+
+    IEnumerator TimerSpawn()
+    {
+        isSpawn = true;
+        yield return new WaitForSeconds(4);
+
         GameObject stock = Instantiate(enemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
 
         Destroy(stock, 5);
+        isSpawn = false;
     }
 }
