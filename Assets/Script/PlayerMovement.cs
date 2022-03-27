@@ -8,15 +8,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
     private Rigidbody rb;
     public float speed = 5;
+    public bool wingRightMissing, wingLeftMissing;
+
     private bool isShooting;
     private float delay;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform spawnBulletPoint;
 
     private float rotX, rotZ;
     private float lerpX = 0.5f, lerpZ = 0.5f;
     [SerializeField] private float addPercent = 0.05f;
 
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform spawnBulletPoint;
 
     void Start()
     {
@@ -27,6 +29,19 @@ public class PlayerMovement : MonoBehaviour
     {
         //MOVEMENT
         Vector3 movementPosition = movementInput;
+
+        if (wingRightMissing)
+        {
+            movementPosition.x += 0.1f;
+            movementPosition.y -= 0.2f;
+        }
+
+        if (wingLeftMissing)
+        {
+            movementPosition.x -= 0.1f;
+            movementPosition.y -= 0.2f;
+        }
+
         Vector3 playerMovement = rb.position + movementPosition * Time.fixedDeltaTime * speed;
         
         if (playerMovement.x >= 9)
@@ -42,14 +57,13 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(playerMovement);
 
         //ROTATION
-        NewRotation(movementInput.x, ref lerpZ);
-        NewRotation(movementInput.y, ref lerpX);
+        NewRotation(movementPosition.x, ref lerpZ);
+        NewRotation(movementPosition.y, ref lerpX);
 
-        if (movementInput == Vector2.zero)
-        {
+        if (movementPosition.y == 0)
             ResetRotation(ref lerpX);
+        if(movementPosition.x == 0)
             ResetRotation(ref lerpZ);
-        }
 
         rotX = Mathf.Lerp(-40, 40, lerpX);
         rotZ = Mathf.Lerp(-30, 30, lerpZ);
