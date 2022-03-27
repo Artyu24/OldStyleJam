@@ -4,14 +4,14 @@ using UnityEditor;
 using UnityEngine;
 
 
-[CustomEditor(typeof(BrakeWing))]
+[CustomEditor(typeof(BreakWing))]
 public class customButton : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        BrakeWing myScript = (BrakeWing)target;
+        BreakWing myScript = (BreakWing)target;
         if (GUILayout.Button("DestroyWing"))
         {
             myScript.DestroyWing();

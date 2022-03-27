@@ -2,7 +2,7 @@
 using System.Collections.Generic;
  using UnityEngine;
 
-public class BrakeWing : MonoBehaviour
+public class BreakWing : MonoBehaviour
 {
     [SerializeField] private GameObject fracturedGameObject;
     [SerializeField] private float breakForce;
