@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject[] enemy;
+    private GameObject randomEnemy;
 
     private float enemyXAxis;
     private float enemyYAxis;
@@ -21,6 +22,10 @@ public class EnemySpawnManager : MonoBehaviour
         enemyXAxis = Random.Range(-9, 10);
         enemyYAxis = Random.Range(-5, 6);
 
+        int num = Random.Range(0, 3);
+
+        randomEnemy = enemy[num];
+
         if(!isSpawn)
             StartCoroutine(TimerSpawn());
 
@@ -32,7 +37,7 @@ public class EnemySpawnManager : MonoBehaviour
         isSpawn = true;
         yield return new WaitForSeconds(4);
 
-        GameObject stock = Instantiate(enemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
+        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
 
         Destroy(stock, 5);
         isSpawn = false;
