@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wing
   - Enemy
+  - Body
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class ObjectHealth : MonoBehaviour
 
     private void Awake()
     {
-        mainPlayerPart = GameObject.FindGameObjectWithTag("Player");
+        mainPlayerPart = GameObject.FindGameObjectWithTag("Body");
         life = maxLife;
     }
 
@@ -25,6 +25,13 @@ public class ObjectHealth : MonoBehaviour
             {
                 case "Wing":
                     Explosion();
+                    
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    string objectName = name;
+                    if (name[0] == 'L')
+                        player.GetComponent<PlayerMovement>().wingLeftMissing = true;
+                    else
+                        player.GetComponent<PlayerMovement>().wingRightMissing = true;
                     break;
 
                 case "Player":
