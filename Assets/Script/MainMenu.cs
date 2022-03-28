@@ -18,11 +18,12 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        //SceneManager.LoadScene("");
+        Debug.Log("Jeu lancé");
     }
 
     public void Quit()
     {
+        Debug.Log("Jeu fermé");
         Application.Quit();
     }
 }
