@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Body
   - Bullet
+  - WallViseur
+  - SpaceShip
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - InvisibleWall
   - 
   - 
   - 

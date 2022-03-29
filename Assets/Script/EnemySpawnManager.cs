@@ -9,7 +9,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     private float enemyXAxis;
     private float enemyYAxis;
-    private float enemyZAxis = 20f;
+    [SerializeField] private float enemyZAxis = 20f;
+    [SerializeField] private float timeBTWSpawn = 2;
 
     private bool isSpawn;
 
@@ -19,8 +20,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Update()
     {
-        enemyXAxis = Random.Range(-9, 10);
-        enemyYAxis = Random.Range(-5, 6);
+        enemyXAxis = Random.Range(-8, 9);
+        enemyYAxis = Random.Range(-4, 5);
 
         int num = Random.Range(0, 3);
 
@@ -35,7 +36,7 @@ public class EnemySpawnManager : MonoBehaviour
     IEnumerator TimerSpawn()
     {
         isSpawn = true;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(timeBTWSpawn);
 
         GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
 
