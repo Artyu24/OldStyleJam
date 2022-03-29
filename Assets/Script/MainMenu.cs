@@ -24,6 +24,6 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Debug.Log("Jeu fermé");
-        Application.Quit();
+        //Application.Quit();
     }
 }
