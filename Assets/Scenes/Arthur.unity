@@ -5131,7 +5131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe9463de8cb44b21bf3b5aafd10ca37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5347578536309045814, guid: 74fce0fc0e2314bcc94ed0556570db05, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speed: 10
 --- !u!4 &599029946
 Transform:
@@ -10334,3 +10337,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a14a627f523568b4f92bc1a0d5c9519b, type: 3}
   m_PrefabInstance: {fileID: 1957886478}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5468056678562439099
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.613596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493450, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468056680064493461, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+      propertyPath: m_Name
+      value: MARCON EXLOSION !!!!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
