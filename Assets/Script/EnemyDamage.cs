@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public GameObject objectToDestroy;
-
+    [SerializeField] private GameObject explosion;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Bullet"))
         {
             GameManager.instance.score += 1;
             Debug.Log(GameManager.instance.score);
-            Destroy(objectToDestroy);
-           
+            GameObject expl =  Instantiate(explosion,transform.position,Quaternion.identity);
+            Destroy(expl,1.0f);
+            Destroy(gameObject);
         }
     }
 }
