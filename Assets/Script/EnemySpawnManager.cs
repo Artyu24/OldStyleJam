@@ -9,7 +9,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     private float enemyXAxis;
     private float enemyYAxis;
-    private float enemyZAxis = 20f;
+    [SerializeField] private float enemyZAxis = 20f;
+    [SerializeField] private float timeBTWSpawn = 2;
 
     private bool isSpawn;
 
@@ -35,7 +36,7 @@ public class EnemySpawnManager : MonoBehaviour
     IEnumerator TimerSpawn()
     {
         isSpawn = true;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(timeBTWSpawn);
 
         GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
 
