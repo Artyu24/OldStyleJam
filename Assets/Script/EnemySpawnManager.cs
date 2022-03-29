@@ -20,8 +20,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Update()
     {
-        enemyXAxis = Random.Range(-9, 10);
-        enemyYAxis = Random.Range(-5, 6);
+        enemyXAxis = Random.Range(-8, 9);
+        enemyYAxis = Random.Range(-4, 5);
 
         int num = Random.Range(0, 3);
 

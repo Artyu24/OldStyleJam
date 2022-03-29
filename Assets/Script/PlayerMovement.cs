@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     public float speed = 5;
     public bool wingRightMissing, wingLeftMissing;
+    private GameObject spaceShip;
 
     private bool isShooting;
     private float delay;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spaceShip = GameObject.FindGameObjectWithTag("SpaceShip");
     }
 
     void FixedUpdate()
@@ -65,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
         if(movementPosition.x == 0)
             ResetRotation(ref lerpZ);
 
-        rotX = Mathf.Lerp(-40, 40, lerpX);
-        rotZ = Mathf.Lerp(-30, 30, lerpZ);
+        rotX = Mathf.Lerp(-30, 30, lerpX);
+        rotZ = Mathf.Lerp(-20, 20, lerpZ);
 
-        transform.eulerAngles = new Vector3(rotX, 0, rotZ);
+        spaceShip.transform.eulerAngles = new Vector3(rotX, 180, rotZ);
 
         //SHOOT
         delay += Time.fixedDeltaTime;
