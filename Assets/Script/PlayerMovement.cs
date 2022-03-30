@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private float lerpX = 0.5f, lerpZ = 0.5f;
     [SerializeField] private float addPercent = 0.05f;
 
+    [Header("Sound")] 
+    [SerializeField] private AudioClip[] shotAudioClip;
+
 
     void Start()
     {
@@ -79,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
             delay = 0;
             Instantiate(bullet, spawnBulletPoint.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(shotAudioClip[Random.Range(0,shotAudioClip.Length)],transform.position,0.6f);
         }
     }
 

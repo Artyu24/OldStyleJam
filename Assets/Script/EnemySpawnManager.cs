@@ -38,7 +38,7 @@ public class EnemySpawnManager : MonoBehaviour
         isSpawn = true;
         yield return new WaitForSeconds(timeBTWSpawn);
 
-        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
+        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.Euler(new Vector3(60,180,0)));
 
         Destroy(stock, 5);
         isSpawn = false;
