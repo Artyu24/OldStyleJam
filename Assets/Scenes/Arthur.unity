@@ -5085,6 +5085,7 @@ MonoBehaviour:
   bullet: {fileID: 5422324028509517773, guid: b3eba4286796cae47bd04941a6910263, type: 3}
   spawnBulletPoint: {fileID: 538399039}
   addPercent: 0.05
+  shotAudioClip: []
 --- !u!114 &472726371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10474,7 +10475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
-  viseurObject: {fileID: 1264361865}
+  targetObject: {fileID: 1264361865}
 --- !u!1001 &1957886478
 PrefabInstance:
   m_ObjectHideFlags: 0

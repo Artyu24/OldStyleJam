@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
             delay = 0;
             Instantiate(bullet, spawnBulletPoint.position, Quaternion.identity);
-            AudioSource.PlayClipAtPoint(shotAudioClip[Random.Range(0,shotAudioClip.Length)],transform.position,0.6f);
+            //AudioSource.PlayClipAtPoint(shotAudioClip[Random.Range(0,shotAudioClip.Length)],transform.position,0.6f);
         }
     }
 
