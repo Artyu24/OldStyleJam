@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: -2376433874417166082}
   m_Layer: 0
   m_Name: prefab1_enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2481326114718593895}
   m_LocalRotation: {x: 0, y: 0.8433915, z: -0.53729963, w: 0}
-  m_LocalPosition: {x: -3.6768632, y: -0.46751136, z: 0}
+  m_LocalPosition: {x: -3.6768632, y: 180, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2485014082927068017}
@@ -850,6 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 5468056680064493461, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
+  explosionAudioClip: {fileID: 8300000, guid: 60373f6f337bb5a4483d5eb09cde31c6, type: 3}
 --- !u!54 &8309410961952415566
 Rigidbody:
   m_ObjectHideFlags: 0

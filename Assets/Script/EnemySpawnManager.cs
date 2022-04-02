@@ -20,8 +20,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Update()
     {
-        enemyXAxis = Random.Range(-8, 9);
-        enemyYAxis = Random.Range(-4, 5);
+        enemyXAxis = Random.Range(-7, 8);
+        enemyYAxis = Random.Range(-3, 4);
 
         int num = Random.Range(0, 3);
 
@@ -38,7 +38,7 @@ public class EnemySpawnManager : MonoBehaviour
         isSpawn = true;
         yield return new WaitForSeconds(timeBTWSpawn);
 
-        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.identity);
+        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.Euler(new Vector3(60,180,0)));
 
         Destroy(stock, 5);
         isSpawn = false;
