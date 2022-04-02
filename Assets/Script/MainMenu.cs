@@ -1,29 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class mainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject canvas;
+    public void Play()
     {
-        
+        SceneManager.LoadScene("GamePlay", LoadSceneMode.Single);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void PlayGame()
-    {
-        Debug.Log("Jeu lancé");
-    }
-
     public void Quit()
     {
         Debug.Log("Jeu fermé");
-        //Application.Quit();
+        Application.Quit();
     }
 }
