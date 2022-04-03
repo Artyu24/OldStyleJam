@@ -11,16 +11,7 @@ public class AddHealth : MonoBehaviour
 
     private void Update()
     {
-        if(isHealing)
-            AddLife();
-    }
-    public void AddLife()
-    {
-        Debug.Log("Healt :" + HealthBar.health);
-        HealthBar.health += 50;
-
-        sliderUI.value += 50;
-        Debug.Log("Healt :" + HealthBar.health);
 
     }
+
 }

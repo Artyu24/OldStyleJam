@@ -10,9 +10,9 @@ public class GetHeart : MonoBehaviour
     {
         if (collision.CompareTag("Body") || collision.CompareTag("Wing"))
         {
-            Debug.Log("Heal");
-            AddHealth.isHealing = true;
-            Destroy(this);
+            Debug.Log("Touché coeur !!");
+            HealthBar.healthUp = true;
+            Destroy(this.gameObject);
         }
     }
 }
