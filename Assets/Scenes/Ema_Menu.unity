@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!114 &627124353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7768,6 +7769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!65 &1083246241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8297,7 +8299,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b1d328d49de79954aa5152aaafb58866, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f86fc6521b5458a46b6458d772f5a19f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.09
   m_Pitch: 1
@@ -9119,6 +9121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!114 &1747783970
 MonoBehaviour:
   m_ObjectHideFlags: 0
