@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeartSpawn : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class HeartSpawn : MonoBehaviour
 
     [SerializeField] private float ZAxis = 20f;
     [SerializeField] private float timeBTWSpawn;
+    public Slider sliderUI;
 
     private bool isSpawn;
 
@@ -30,8 +32,8 @@ public class HeartSpawn : MonoBehaviour
             StartCoroutine(TimerSpawn());
         }
 
-
     }
+
 
 
     IEnumerator TimerSpawn()

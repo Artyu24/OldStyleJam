@@ -42,7 +42,6 @@ public class HealthBar : MonoBehaviour
 
 
 
-        Debug.Log("health = " + health);
 
         if (health <= 0)
         { 
