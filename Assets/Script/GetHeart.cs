@@ -12,7 +12,7 @@ public class GetHeart : MonoBehaviour
         {
             Debug.Log("Heal");
             AddHealth.isHealing = true;
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

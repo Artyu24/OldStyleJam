@@ -2712,6 +2712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!65 &1246135162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9025,6 +9026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!65 &1817428872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14637,6 +14639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 100
+  explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
 --- !u!65 &2026185621
 BoxCollider:
   m_ObjectHideFlags: 0
