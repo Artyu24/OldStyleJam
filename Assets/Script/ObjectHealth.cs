@@ -7,6 +7,7 @@ public class ObjectHealth : MonoBehaviour
     public int life;
     [SerializeField] private int maxLife;
     private GameObject mainPlayerPart;
+    [SerializeField] private GameObject explosion;
 
     private void Awake()
     {
@@ -58,6 +59,8 @@ public class ObjectHealth : MonoBehaviour
         if (col.CompareTag("Enemy"))
         {
             Destroy(col.gameObject);
+            GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(expl, 1.0f);
 
             TakeDamage(20);
 
