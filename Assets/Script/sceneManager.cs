@@ -14,7 +14,6 @@ public class sceneManager : MonoBehaviour
     public static bool isGameOver;
 
 
-
     void Update()
     {
         if ((isPaused == true) && (canvas.activeSelf == false))
