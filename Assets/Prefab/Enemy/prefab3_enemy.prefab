@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 5468056680064493461, guid: ea25ef1def352cf49a87f77fa84cf9df, type: 3}
-  explosionAudioClip: {fileID: 8300000, guid: 60373f6f337bb5a4483d5eb09cde31c6, type: 3}
+  explosionAudioClip: {fileID: 8300000, guid: 6a09d26a6b22170478ecfcfa20c7e71b, type: 3}
 --- !u!54 &-6792308869313089356
 Rigidbody:
   m_ObjectHideFlags: 0

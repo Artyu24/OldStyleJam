@@ -10,37 +10,84 @@ public class EnemySpawnManager : MonoBehaviour
     private float enemyXAxis;
     private float enemyYAxis;
     [SerializeField] private float enemyZAxis = 20f;
-    [SerializeField] private float timeBTWSpawn = 2;
+    [SerializeField] private float timeBTWSpawn;
 
     private bool isSpawn;
 
-    private Rigidbody rb;
-    public float speed = 10;
+    public float speed;
 
 
     void Update()
     {
-        enemyXAxis = Random.Range(-7, 8);
-        enemyYAxis = Random.Range(-3, 4);
 
         int num = Random.Range(0, 3);
 
         randomEnemy = enemy[num];
 
-        if(!isSpawn)
+        if(!isSpawn && GameManager.instance.score < 5)
+        {
+            speed = 20;
+            timeBTWSpawn = 2;
             StartCoroutine(TimerSpawn());
+        }
+        else if(!isSpawn && GameManager.instance.score < 15)
+        {
+            speed = 40;
+            timeBTWSpawn = 1;
+            StartCoroutine(TimerSpawn());
+        }
+        else if(!isSpawn && GameManager.instance.score < 30)
+        {
+            speed = 50;
+            timeBTWSpawn = 2;
+            for (int i = 0; i < 3; i++)
+                StartCoroutine(TimerSpawn());
+        }
+        else if (!isSpawn && GameManager.instance.score < 40)
+        {
+            speed = 70;
+            timeBTWSpawn = 2;
+            for (int i = 0; i < 3; i++)
+                StartCoroutine(TimerSpawn());
+        }
+        else if (!isSpawn && GameManager.instance.score < 50)
+        {
+            speed = 70;
+            timeBTWSpawn = 1;
+            for(int i = 0; i < 3; i++)
+                StartCoroutine(TimerSpawn());
+        }
+        else if (!isSpawn && GameManager.instance.score < 100)
+        {
+            speed = 100;
+            timeBTWSpawn = 1;
+            for(int i = 0; i < 5; i++)
+                StartCoroutine(TimerSpawn());
+    
+        }
+        else if (!isSpawn && GameManager.instance.score >= 100)
+        {
+            speed = 100;
+            timeBTWSpawn = 1;
+            for (int i = 0; i < 7; i++)
+                StartCoroutine(TimerSpawn());
 
-        
+        }
+
+
+
     }
+
 
     IEnumerator TimerSpawn()
     {
         isSpawn = true;
         yield return new WaitForSeconds(timeBTWSpawn);
 
-        GameObject stock = Instantiate(randomEnemy, new Vector3(enemyXAxis, enemyYAxis, enemyZAxis), Quaternion.Euler(new Vector3(60,180,0)));
-
+        GameObject stock = Instantiate(randomEnemy, new Vector3(Random.Range(-7, 8), Random.Range(-3, 4), enemyZAxis), Quaternion.Euler(new Vector3(60, 180, 0)));
         Destroy(stock, 5);
+
         isSpawn = false;
     }
+
 }

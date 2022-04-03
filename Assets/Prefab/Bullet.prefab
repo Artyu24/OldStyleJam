@@ -127,3 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   radiusHelpTarger: 1
+  piouAudioClip:
+  - {fileID: 8300000, guid: fa554f809cc69514d8a7507d3bfa451a, type: 3}
+  - {fileID: 8300000, guid: 72d321e1129d47547b27dc1820d45a00, type: 3}
+  - {fileID: 8300000, guid: 24810d56d8a4b5b40bf82d35736ac1f6, type: 3}
