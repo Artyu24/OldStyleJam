@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = score.ToString();
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "GameOver")
+            scoreText.text = score.ToString();
+        DontDestroyOnLoad(this.gameObject);
     }
 }
