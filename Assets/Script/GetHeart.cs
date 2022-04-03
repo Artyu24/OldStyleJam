@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GetHeart : MonoBehaviour
 {
+
+    public Slider sliderUI;
+    
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Body") || collision.CompareTag("Wing"))
@@ -14,6 +19,8 @@ public class GetHeart : MonoBehaviour
                 HealthBar.health = 300;
             Destroy(this);
             Debug.Log("Apres clo" + HealthBar.health);
+            sliderUI.value = HealthBar.health;
+
 
         }
     }
