@@ -15,6 +15,7 @@ public class GetHeart : MonoBehaviour
         {
             Debug.Log("Touch� coeur !!");
             HealthBar.healthUp = true;
+            AudioSource.PlayClipAtPoint(bonusAudioClip, transform.position, 1);
             Destroy(this.gameObject);
 
         }
