@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
 
     public int score;
     [SerializeField] private Text scoreText;
+    [SerializeField] private GameObject body;
 
 
-    private void Awake()
+    public void Awake()
     {
         if (instance == null)
             instance = this;
+
     }
 
     private void Update()
@@ -24,5 +26,12 @@ public class GameManager : MonoBehaviour
         if ((scene.name != "GameOver") && (scene.name != "MainMenu"))
             scoreText.text = score.ToString();
         DontDestroyOnLoad(this.gameObject);
+        
+
+        if (HealthBar.health <= 0)
+            Debug.Log("t'es mort");
+
+
+
     }
 }

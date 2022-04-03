@@ -5,17 +5,11 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    private int health;
+    public static int health;
     public Slider sliderUI;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         health = ObjectHealth.life;
         sliderUI.value = health;

@@ -17,7 +17,9 @@ public class BreakWing : MonoBehaviour
             rb.AddForce(force);
         }
 
-        Destroy(gameObject);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+
 
     }
 }

@@ -46,7 +46,7 @@ public class sceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
-    public void GameOver()
+    public static void GameOver()
     {
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
 
