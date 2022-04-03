@@ -8,11 +8,21 @@ public class BulletMovement : MonoBehaviour
     public float speed = 10;
     [SerializeField] private float radiusHelpTarger = 1f;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip[] piouAudioClip;
+
     private void Awake()
     {
+        int r = Random.Range(0, piouAudioClip.Length );
+
+
+        AudioClip piou = piouAudioClip[r];
+
         rb = GetComponent<Rigidbody>();
         rb.velocity = Vector3.forward * speed;
         Destroy(gameObject,5);
+
+        AudioSource.PlayClipAtPoint(piou, transform.position, 1);
     }
 
     private void Update()
@@ -30,5 +40,11 @@ public class BulletMovement : MonoBehaviour
         }
         else
             rb.velocity = Vector3.forward * speed;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.CompareTag("Enemy"))
+            this.gameObject.SetActive(false);
     }
 }
