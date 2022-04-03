@@ -2713,6 +2713,7 @@ MonoBehaviour:
   life: 0
   maxLife: 100
   explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
+  damageAudioClip: {fileID: 8300000, guid: d5dce25a02fc8614983b85fb06bad72f, type: 3}
 --- !u!65 &1246135162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9027,6 +9028,7 @@ MonoBehaviour:
   life: 0
   maxLife: 100
   explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
+  damageAudioClip: {fileID: 8300000, guid: d5dce25a02fc8614983b85fb06bad72f, type: 3}
 --- !u!65 &1817428872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14640,6 +14642,7 @@ MonoBehaviour:
   life: 0
   maxLife: 100
   explosion: {fileID: 5468056680064493461, guid: fe67424603277244f824d5cc9ab47f6a, type: 3}
+  damageAudioClip: {fileID: 8300000, guid: d5dce25a02fc8614983b85fb06bad72f, type: 3}
 --- !u!65 &2026185621
 BoxCollider:
   m_ObjectHideFlags: 0
