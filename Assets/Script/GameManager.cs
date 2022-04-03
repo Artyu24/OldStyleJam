@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if ((scene.name != "GameOver") && (scene.name != "MainMenu"))
             scoreText.text = score.ToString();
+        if (scene.name == "MainMenu")
+            Destroy(this.gameObject);
+
         DontDestroyOnLoad(this.gameObject);
     }
 }

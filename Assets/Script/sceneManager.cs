@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 
+
 public class sceneManager : MonoBehaviour
 {
     private bool isPaused;
     [SerializeField] private GameObject canvas;
 
-    [SerializeField] private bool isGameOver;
-
-
+    public static bool isGameOver;
 
 
 
@@ -49,6 +48,5 @@ public class sceneManager : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-
     }
 }
