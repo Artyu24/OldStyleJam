@@ -13,9 +13,8 @@ public class GetHeart : MonoBehaviour
     {
         if (collision.CompareTag("Body") || collision.CompareTag("Wing"))
         {
-            Debug.Log("Heal");
-            AddHealth.isHealing = true;
-            AudioSource.PlayClipAtPoint(bonusAudioClip, transform.position, 1);
+            Debug.Log("Touch� coeur !!");
+            HealthBar.healthUp = true;
             Destroy(this.gameObject);
 
         }

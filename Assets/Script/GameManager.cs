@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         
 
-        if (HealthBar.health <= 0)
-            Debug.Log("t'es mort");
 
 
 
