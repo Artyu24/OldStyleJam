@@ -8,6 +8,8 @@ public class ObjectHealth : MonoBehaviour
     [SerializeField] private int maxLife;
     private GameObject mainPlayerPart;
     [SerializeField] private GameObject explosion;
+    [Header("Sound")]
+    [SerializeField] private AudioClip damageAudioClip;
 
     private void Awake()
     {
@@ -60,9 +62,10 @@ public class ObjectHealth : MonoBehaviour
         {
             Destroy(col.gameObject);
             GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(damageAudioClip, transform.position, 1);
             Destroy(expl, 1.0f);
 
-            TakeDamage(20);
+            TakeDamage(35);
 
             if (CompareTag("Wing"))
             {

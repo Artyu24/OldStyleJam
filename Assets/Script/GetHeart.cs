@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 
 public class GetHeart : MonoBehaviour
 {
+    [Header("Sound")]
+    [SerializeField] private AudioClip bonusAudioClip;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -12,7 +15,11 @@ public class GetHeart : MonoBehaviour
         {
             Debug.Log("Touch� coeur !!");
             HealthBar.healthUp = true;
+            AudioSource.PlayClipAtPoint(bonusAudioClip, transform.position, 1);
             Destroy(this.gameObject);
+
         }
+
+
     }
 }
