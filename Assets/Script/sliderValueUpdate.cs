@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class sliderValueUpdate : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Slider sliderUI;
+    public Text textSliderValue;
     void Start()
     {
         textSliderValue.text = ("60%");
     }
-    public Slider sliderUI;
-    public Text textSliderValue;
+
     // Update is called once per frame
     void Update()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectHealth : MonoBehaviour
 {
-    private int life;
+    public static int life;
     [SerializeField] private int maxLife;
     private GameObject mainPlayerPart;
 
