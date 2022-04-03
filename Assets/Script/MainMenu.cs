@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class mainMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
     public void Play()
     {
-        SceneManager.LoadScene("GamePlay", LoadSceneMode.Single);
+        SceneManager.LoadScene("Ema_Menu", LoadSceneMode.Single);
     }
     public void Quit()
     {
